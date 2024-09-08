@@ -1,0 +1,166 @@
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.player, .box, .destination, .box-on-destination, .obstacle {
+    width: 100%;
+    height: 100%;
+}
+
+.player { background-color: blue; }
+.box { background-color: brown; }
+.destination { background-color: lightgreen; }
+.box-on-destination { background-color: green; }
+.obstacle { background-color: gray; }
+
+.game-hudContainer {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    flex-wrap: wrap;
+}
+
+.quantifyUndoMove {
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    margin-right:3px;
+    background-color: gray;
+}
+
+.quantifyRedoMove {
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    margin-right:3px;
+    background-color: gray;
+}
+
+.quantifyResetNivel {
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    margin-right:3px;
+    background-color: gray;
+}
+
+.quantifyActive {
+    background-color: lightgreen;
+}
+
+.game-hud {
+    width: 150px;
+    height: 32px;
+    margin: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.game-hud2 {
+    width: 150px;
+    height: 32px;
+    margin-top: 5px;
+    margin-left: 1px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.alinhamentoHud {
+    padding: 9px;
+    line-height: 2;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 105px;
+    height: 76px;
+    background-color: black;
+    margin-left: 25px;
+    margin-right: 5px;
+    color: lightgreen;
+}
+
+.letter {
+    position: absolute;
+    margin-top:6px;
+    margin-left: 19px;
+    font-size: 55px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 255, 0.5);
+    align-content: center;
+}
+
+.a {
+    top: 0px;
+    left: 14px;
+    color: rgba(255, 0, 0, 0.5); /* Cor diferente para a letra A */  
+}
+
+.v {
+    top: 0px;
+    left: 0;
+    top: 0;
+}
+
+.game-board {
+    width: 400px;
+    height: 400px;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    gap: 1px;
+}
+
+
+.controls1 {
+    margin-top: 20px;
+    display: flex;
+}
+.controls2 {
+    display: flex;
+}
+.controls3 {
+   display: flex;
+}
+
+.control-button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin: 5px;
+    cursor: pointer;
+}
+.control-button2 {
+    width: 80px;
+    height: 50px;
+    font-size: 12px;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center
+    align-items: center;
+    vertical-align: center;
+}

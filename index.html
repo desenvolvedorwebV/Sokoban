@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Empurra Caixas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gameContainer">
+        <div class="infoContainer">
+            <div class="logo" id="logo">
+                <div class="letter v">V</div>
+                <div class="letter a">A</div>
+                <c style="font-size:12px;line-height:10;margin-left:1px">Produções</c>
+            </div>
+            <div class="game-hudContainer">
+                <div class="game-hud">
+                      <c class="alinhamentoHud">Movimentos: <span id="movimentos" style="color:gold">0</span></c>
+                </div>
+                <div class="game-hud">
+                    <c class="alinhamentoHud">Empurrões: <span id="empurroes" style="color:gold">0</span></c>
+                </div>
+            </div>
+            <div class="game-hudContainer">
+                <div class="game-hud2">
+                    <c class="alinhamentoHud">Tempo: <span id="tempo" style="color:gold">00:00:00</span></c>
+                </div>
+                <div class="game-hud2">
+                    <c class="alinhamentoHud">Nível: <span id="nivel" style="color:gold">1</span></c>
+                </div>
+            </div>
+        </div>
+        <div class="game-board" id="gameBoard"></div>
+        <div class="controls1">
+            <button id="up" class="control-button">↑</button>
+        </div>
+        <div class="controls2">
+            <button id="left" class="control-button">←</button>
+            <button id="down" class="control-button">↓</button>
+            <button id="right" class="control-button">→</button>
+        </div>
+        <div class="controls3">
+            <button id="undo" class="control-button2">
+                Desfazer<br>
+                Movimento<br>
+                <div style="display:flex">
+                    <div class="quantifyUndoMove quantifyActive"></div>
+                    <div class="quantifyUndoMove quantifyActive"></div>
+                    <div class="quantifyUndoMove quantifyActive"></div>
+                    <div class="quantifyUndoMove quantifyActive"></div>
+                    <div class="quantifyUndoMove quantifyActive"></div>
+                </div>
+            </button>
+            <button id="reset" class="control-button2">
+                Reiniciar<br>
+                Nível<br>
+                <div style="display:flex">
+                    <div class="quantifyResetNivel quantifyActive"></div>
+                    <div class="quantifyResetNivel quantifyActive"></div>
+                    <div class="quantifyResetNivel quantifyActive"></div>
+                    <div class="quantifyResetNivel quantifyActive"></div>
+                    <div class="quantifyResetNivel quantifyActive"></div>
+                </div>
+            </button>
+            <button id="pause" class="control-button2">Pausar<br>Jogo</button>
+            <button id="redo" class="control-button2">
+                Refazer<br>
+                Movimento<br>
+                <div style="display:flex">
+                    <div class="quantifyRedoMove quantifyActive"></div>
+                    <div class="quantifyRedoMove quantifyActive"></div>
+                    <div class="quantifyRedoMove quantifyActive"></div>
+                    <div class="quantifyRedoMove quantifyActive"></div>
+                    <div class="quantifyRedoMove quantifyActive"></div>
+                </div>
+            </button>
+        </div>
+    <br>
+    <div class="debug" style="display:none">
+        <div id="debug">Posições:</div>
+    </div>
+    <div id="textoPausa" style="position:relative;top:-510px;text-align:center;color:white;font-weight:bold;font-size:40px; display:none">PAUSA</div>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
